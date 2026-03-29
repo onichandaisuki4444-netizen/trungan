@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes Store</title>
+    <style>
+        /* Thiết lập cơ bản */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: #111;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Vùng chứa nội dung chính */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Hình ảnh mặc định */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            background-color: #f4f4f4; /* Màu nền chờ khi chưa có ảnh */
+            border-radius: 4px;
+        }
+
+        /* Nút bấm */
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        
+        .btn-black {
+            background-color: #000;
+            color: #fff;
+        }
+        
+        .btn-gray {
+            background-color: #e0e0e0;
+            color: #000;
+        }
+
+        /* Phần Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .btn-nav-next {
+            background-color: #000;
+            color: #fff;
+            padding: 5px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        /* Phần Hero (SHOES STORE) */
+        .hero {
+            margin-bottom: 50px;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .hero p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .hero-img {
+            margin-top: 20px;
+            width: 100%;
+            height: 400px; /* Chiều cao minh họa */
+            object-fit: cover;
+        }
+
+        /* Các thẻ tiêu đề Section */
+        h2.section-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            margin-top: 60px;
+        }
+
+        /* Lưới 2 cột cho hình ảnh */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* Lưới 2 cột bất đối xứng cho phần "Giá tốt, hàng tốt" */
+        .grid-price-quality {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .features-list {
+            margin-bottom: 30px;
+        }
+
+        .feature-item {
+            margin-bottom: 20px;
+        }
+
+        .feature-item strong {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+
+        .feature-item span {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .action-buttons {
+            display: flex;
+        }
+
+        /* Phần bình luận (Lưới 3 cột) */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .comment-card {
+            border: 1px solid #eaeaea;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .comment-text {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #ccc;
+        }
+
+        .user-name {
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* Responsive cho điện thoại */
+        @media (max-width: 768px) {
+            .grid-2, .grid-price-quality, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            .grid-price-quality {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <div class="logo">giaycuatoi.com</div>
+            <nav>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#" class="btn-nav-next">next</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>SHOES STORE</h1>
+            <p>shop bán giày hàng đầu vn</p>
+            <button class="btn btn-black">đăng nhập</button>
+            
+            <img src="giay1.jpg" class="hero-img">
+        </section>
+
+        <section>
+            <h2 class="section-title">các loại giày da chất lượng</h2>
+            <div class="grid-2">
+                <img src="giay2.jpg"  style="height: 300px; object-fit: cover;">
+                <img src="giay3.jpg"  style="height: 300px; object-fit: cover;">
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">giá tốt ,hàng tốt</h2>
+            <div class="grid-price-quality">
+                <div class="text-content">
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <strong>đến từ nghệ nhân pháp</strong>
+                            <span>những chiếc giày xuất xứ từ pháp</span>
+                        </div>
+                        <div class="feature-item">
+                            <strong>chất lượng từ những điều nhỏ</strong>
+                            <span>làm từ động vật real</span>
+                        </div>
+                        <div class="feature-item">
+                            <strong>độc quyền</strong>
+                            <span>ở đây mới có</span>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn btn-black">chi tiết</button>
+                        <button class="btn btn-gray">đặt hàng ngay</button>
+                    </div>
+                </div>
+                <div class="image-content">
+                    <img src="giay4.jpg" style="height: 350px; object-fit: cover; width: 100%;">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">giày thể thao xịn</h2>
+            <div class="grid-2">
+                <img src="giay5.jpg"  style="height: 350px; object-fit: cover;">
+                <img src="giay6.jpg" style="height: 350px; object-fit: cover;">
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">bình luận hay</h2>
+            <div class="grid-3">
+                <div class="comment-card">
+                    <p class="comment-text">"A terrific piece of praise"</p>
+                    <div class="user-info">
+                        <img src="hoa.jpg"  class="avatar"> <span class="user-name">hay</span>
+                    </div>
+                </div>
+                <div class="comment-card">
+                    <p class="comment-text">"A fantastic bit of feedback"</p>
+                    <div class="user-info">
+                        <img src="7.jpg"  class="avatar"> <span class="user-name">gioi</span>
+                    </div>
+                </div>
+                <div class="comment-card">
+                    <p class="comment-text">"A genuinely glowing review"</p>
+                    <div class="user-info">
+                        <img src="3.jpg"  class="avatar"> <span class="user-name">chất</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="height: 50px;"></div>
+
+    </div>
+
+</body>
+</html>

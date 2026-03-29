@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #id1{
+            background-color: brown;
+            width: 800px;
+            margin: auto;
+        }
+        .sp{
+            width: 300px;background-color: aqua;
+            height: 200px;
+            margin: 5px;display: inline-block;
+            border-radius: 50px;padding: 30px;
+        }
+        .sp>span{font-size: 50px;padding: 30px}
+    </style>
+</head>
+<body>
+       
+ <!-- div#Id1>div.sp*2>(span>{sp$})+(p>{ndung sp$}) remember ctrl+space -->
+  <!-- #id1>.sp*2(span>{sp$})+(p>{ndung sp$}) -->
+<div id="id1">
+    <div class="sp">
+        <span>sp1</span>
+        <p>ndung sp1</p>
+    </div>
+    <div class="sp">
+        <span>sp2</span>
+        <p>ndung sp2</p>
+    </div>
+    <div class="sp">
+        <span>sp3</span>
+        <p>ndung sp3</p>
+    </div>
+    <div class="sp">
+        <span>sp4</span>
+        <p>ndung sp4</p>
+    </div>
+</body>
+</html>
